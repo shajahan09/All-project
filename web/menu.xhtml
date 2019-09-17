@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+        <style>
+            body{
+                background: url(st.jpg) no-repeat;
+                background-size: cover;
+            }
+        </style>
+            
+    </h:head>
+    <h:body>
+        
+        <h:form>
+            <p:tabMenu >
+                <p:menuitem value="Sales" icon="pi pi-user" action="#{type.sel()}">
+              
+                
+                </p:menuitem>
+                <p:menuitem value="Purchase" icon="pi pi-user" action="#{productController.productUrl()}">
+                </p:menuitem>
+                
+                <p:menuitem value="Stock-view" icon="pi pi-user" action="#{productController.view()}">
+                </p:menuitem>
+                
+                <p:menuitem value="History" icon="pi pi-user" action="#{type.selPer()}">
+                </p:menuitem>
+               
+                <p:menuitem>
+                    
+                <p:commandButton  value="Logout" icon="pi pi-home" action="#{type.back}"/>
+                   
+                </p:menuitem>
+                
+                
+            </p:tabMenu>
+            
+              
+        </h:form>
+      
+    </h:body>
+</html>
+

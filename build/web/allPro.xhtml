@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <p:dataTable value="#{productController.productList()}" var="product">
+            <f:facet name="header">
+               
+                <h1>Product List</h1>
+            </f:facet>
+            <p:column headerText="Number">
+              <h:outputText value="#{product.id}"/>  
+            </p:column >
+            <p:column headerText="Name">
+               <h:outputText value="#{product.name}"/> 
+            </p:column>
+            <p:column headerText="Self-No">
+                <h:outputText value="#{product.self}"/> 
+            </p:column>
+            <p:column headerText="Date">
+                <h:outputText value="#{product.date}"/> 
+            </p:column>
+            <p:column headerText="Quantity">
+                 <h:outputText value="#{product.qty}"/>
+            </p:column>
+            <p:column headerText="Price">
+              <h:outputText value="#{product.price}"/>   
+            </p:column>
+            
+            <f:facet name="footer">
+               
+                <h:form>
+                    <p:commandButton action="#{productController.back()}" value="Back"/>
+                    <p:commandLink action="#{productController.productUrl()}" value="addProduct"/>
+                </h:form>
+            </f:facet>
+        </p:dataTable>
+    </h:body>
+</html>
+

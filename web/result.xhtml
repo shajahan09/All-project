@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Facelet Title</title>
+        <style>
+                body{
+                    background: url("lg.jpg")no-repeat center;
+                    background-size: cover;
+                   
+                    
+                }
+            </style>
+        
+    </h:head>
+    <h:body>
+        <center><br/><br/><br/><br/><br/><br/><br/><br/>
+        <h:form>
+            <p:panelGrid columns="2">
+                 <f:facet name="header">User-Result</f:facet>
+        <p:outputLabel value="Name:"/>
+        <h:outputText value="#{type.name}"/>
+        
+        <p:outputLabel value="Email:"/>
+        <h:outputText value="#{type.email}"/>
+        <p:outputLabel value="Age:"/>
+        <h:outputText value="#{type.age}"/>
+        <p:outputLabel value="Gender:"/>
+        <h:outputText value="#{type.gen}"/>
+        <p:outputLabel value="Hobbies:"/>
+        <h:outputText value="#{type.hobby}"/>
+        <p:outputLabel value="Birth-of-Date:"/>
+        <h:outputText value="#{type.date}"/>
+        
+        </p:panelGrid>
+            <p:commandLink type="submit" value="Back" action="#{type.bk()}"/>
+        </h:form>
+            </center>
+    </h:body>
+</html>
+
